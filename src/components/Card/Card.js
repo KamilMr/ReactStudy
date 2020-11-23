@@ -4,16 +4,16 @@ import PropTypes from 'prop-types';
 
 class Card extends React.Component {
     static propTypes = {
-        title: PropTypes.node,
-      }
+      title: PropTypes.node,
+    }
 
     render(){
-        return (
-            <div className={styles.component}>
-                 <h3 className={styles.title}>{this.props.title}</h3>
-            </div>
-        )
+      return (
+        <div className={styles.component}>
+          <h3 className={styles.title}>{this.props.title}</h3>
+        </div>
+      );
     }
 }
 
-export default Card
+export default Card;

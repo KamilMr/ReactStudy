@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
+    action: PropTypes.node,
   }
 
   static defaultProps = {
@@ -27,6 +28,7 @@ class Creator extends React.Component {
 
   handleOK = () => {
     if(this.state.value != ''){
+
       this.props.action(this.state.value);
       this.setState({
         value: '',

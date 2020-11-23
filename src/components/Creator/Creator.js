@@ -21,7 +21,7 @@ class Creator extends React.Component {
     // console.log(event);
     this.setState({
       value: event.target.value,
-      visibleButtons: event.target.value.length > 0
+      visibleButtons: event.target.value.length > 0,
     });
   }
 
@@ -30,7 +30,7 @@ class Creator extends React.Component {
       this.props.action(this.state.value);
       this.setState({
         value: '',
-        visibleButtons: false
+        visibleButtons: false,
       });
     }
   }
@@ -38,7 +38,7 @@ class Creator extends React.Component {
   handleCancel = () => {
     this.setState({
       value: '',
-      visibleButtons: false
+      visibleButtons: false,
     });
   }
 
@@ -53,7 +53,7 @@ class Creator extends React.Component {
         />
         <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
           <Button onClick={this.handleOK}>OK</Button>
-          <Button onClick={this.handleCancel} variant='danger'>cancel</Button>
+          <Button onClick={this.handleCancel} variant='danger small regular'>cancel</Button>
         </div>
       </div>
     );

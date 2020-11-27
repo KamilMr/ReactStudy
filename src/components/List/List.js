@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 import Creator from '../Creator/Creator';
 
+
 class List extends React.Component {
 
     static propTypes = {
@@ -15,6 +16,7 @@ class List extends React.Component {
       image: PropTypes.string,
       addColumn: PropTypes.func,
     }
+    
     static defaultProps = {
       description: settings.defaultListDescription,
     }
@@ -22,9 +24,8 @@ class List extends React.Component {
       const {title, image, description, columns, addColumn} = this.props;
       return (
         <section className={styles.component}>
-          {console.log('takie', this.props.columns.columns )}
-          <h2 className={styles.subtitle}><Hero titleText={title} image={image} /></h2>
-        
+
+          <h2 className={styles.subtitle}><Hero titleText={title} image={image} /></h2>        
           <div className={styles.description}>
             {description}
           </div>

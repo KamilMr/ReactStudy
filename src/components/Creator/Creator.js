@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
-    action: PropTypes.node,
+    action: PropTypes.func,
   }
 
   static defaultProps = {
@@ -19,7 +19,6 @@ class Creator extends React.Component {
   }
 
   handleChange = event => {
-    // console.log(event);
     this.setState({
       value: event.target.value,
       visibleButtons: event.target.value.length > 0,
@@ -28,8 +27,8 @@ class Creator extends React.Component {
 
   handleOK = () => {
     if(this.state.value != ''){
-
       this.props.action(this.state.value);
+     
       this.setState({
         value: '',
         visibleButtons: false,

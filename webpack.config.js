@@ -5,8 +5,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const baseConfig = () => ({
   entry: './src/index.js',
+  devServer: {
+    historyApiFallback: true,
+  },  
   output: {
     path: path.join(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'scripts_bundle.js',
   },
   module: {

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --host 0.0.0.0 --open --hot",
+    "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "lint": "eslint src/",
     "start-server": "http-server dist"

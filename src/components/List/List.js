@@ -26,7 +26,9 @@ class List extends React.Component {
       return (
         <section className={styles.component}>
           <Container>
-            <h2 className={styles.subtitle}><Hero titleText={title} image={image} /></h2>        
+            <h2 className={styles.subtitle}>
+              <Hero titleText={title} image={image} />
+            </h2>        
             <div className={styles.description}>
               {description}
             </div>

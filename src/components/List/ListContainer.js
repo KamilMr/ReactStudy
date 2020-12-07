@@ -7,7 +7,7 @@ const mapStateToProps = (state, props) => {
   /* Ta ostatnia różnica wynika z tego, że props.match zawiera informacje przekazywane przez Route, zawierające m.in. adres strony i parametry w nim zawarte – takie jak :id. */
   const id = props.match.params.id;
   const filteredLists = state.lists.filter(list => list.id == id);
-  const listParams = filteredLists[0] || {};
+  const listParams = filteredLists[0] || {}; 
 
   return {
     ...listParams,

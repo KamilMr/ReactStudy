@@ -1,7 +1,12 @@
 import shortid from 'shortid';
 
-export const getCardForList = ({cards, searchString}, columnId) => 
-  cards.filter(card => card.columnId == columnId && new RegExp(searchString, 'i').test(card.title));
+export const getCardForList = ({cards}, columnId) => 
+  cards.filter(card => card.columnId == columnId);
+
+/* nowy selektor, wybierający karty ze wszystkich list, z uwzględnieniem wyszukiwanej frazy. */
+export const getCardFromAllList = ({cards}, id) => cards.filter(card => new RegExp(id, 'i').test(card.title));
+
+
 
 const reducerName = 'cards';
 
